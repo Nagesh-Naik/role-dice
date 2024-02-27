@@ -10,12 +10,7 @@ import {
   Pressable
 } from 'react-native';
 
-// import DiceOne from '../assets/DiceOne.png'
-// import DiceTwo from '../assets/ DiceTwo.png'
-// import DiceThree from '../assets/DiceThree.png'
-// import DiceFour from '../assets/DiceFour.png'
-// import DiceFive from '../assets/DiceFive.png'
-// import DiceSix from '../assets/DiceSix.png'
+
 
 const DiceOne = require('./assets/DiceOne.png')
 const DiceTwo = require('./assets/DiceTwo.png')
@@ -77,6 +72,7 @@ function App(): JSX.Element {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.heading}>Lets Play the Dice..</Text>
       <Dice imageUrl={diceImage} />
       <Pressable
         onPress={rollDiceOnTap}
@@ -118,6 +114,12 @@ const styles = StyleSheet.create({
     backgroundColor:'#000',
     marginTop:10
   },
+  heading:{
+    fontSize:24,
+    fontWeight:'bold',
+    padding:5,
+    marginBottom:10,
+  }
 });
 
 export default App;
